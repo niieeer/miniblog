@@ -18,7 +18,7 @@ require("./config/mysql.php");
         <div id="main">
             <?php
 
-            $req = $connexion->prepare('SELECT title, content FROM articles  WHERE is_DELETED =0 ORDER BY id DESC LIMIT 4');
+            $req = $connexion->prepare('SELECT title, content FROM articles  WHERE is_DELETED =0 ORDER BY id DESC LIMIT 6');
             $req->execute();
             $articles = $req->fetchAll();
 
@@ -29,7 +29,7 @@ require("./config/mysql.php");
 
                 <div class="articleContainer">
                     <h2><?php echo $article["title"]; ?></h2>
-                    <p><?php echo substr($article["content"], 0, 410); ?>... </p>
+                    <p><?php echo substr($article["content"], 0, 400); ?>... </p>
                     <a class="Ahref" href="">Lire la suite</a>
                 </div>
             <?php
