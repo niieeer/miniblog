@@ -4,10 +4,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <?php include_once('../includes/head.php'); ?>
     <title>Ajout d'articles</title>
 </head>
 
@@ -29,9 +26,9 @@
             </div>
             <div>
                 <select name="categorie" id="categorie">
-                    <option value="1">Héros</option>
-                    <option value="2">Avengers</option>
-                    <option value="3">Méchants</option>
+                    <option value="1">Shonen</option>
+                    <option value="2">Seinen</option>
+                    <option value="3">Hentai</option>
                 </select>
             </div>
             <div id="login_button">

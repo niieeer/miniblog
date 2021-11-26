@@ -11,9 +11,4 @@ setcookie('pass_hache', '');
 
 $message = "Vous êtes bien déconnecté";
 
-function message()
-{
-    $message = "Vous êtes bien déconnecté";
-}
-
 header('Location: ../index.php?message=' . $message);

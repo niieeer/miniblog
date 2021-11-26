@@ -1,7 +1,0 @@
-UPDATE article SET is_DELETED = 1 ;
-
-
-WHERE id_DELETED= 0 ;
-
-
-SELECT  FROM article WHERE id_DELETED = 0; ORDER BY DESC ;

@@ -24,6 +24,7 @@ header {
 
 nav {
   display: flex;
+  font-size: 23px;
 }
 nav a {
   margin: 20px;
@@ -211,13 +212,18 @@ input[type="submit"]:hover {
 .articleContainer a {
   color: rgb(228, 101, 27);
 }
-@font-face {
-  font-family: big_bad_robot;
-  src: url(./fonts/big_bad_robot/BigBadRobot.otf);
-}
 
 .headtitle {
   color: white;
-  font-size: 30px;
+  font-size: 33px;
   font-weight: 650;
+}
+
+.navarticle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  color: red;
 }
