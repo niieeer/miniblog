@@ -1,7 +1,9 @@
 <?php
 require_once("../config/mysql.php");
 
-function checkAddParams($user_id, $title, $content, $categorie)
+$today = date("Y-m-d H:i:s");
+
+function checkAddParams($user_id, $title, $content, $categorie, $today)
 {
 
     global $error;
@@ -17,17 +19,17 @@ function checkAddParams($user_id, $title, $content, $categorie)
         return $error;
     }
 
-    insertArticle($user_id, $title, $content, $categorie);
+    insertArticle($user_id, $title, $content, $categorie, $today);
 }
 
-function insertArticle($user_id, $title, $content, $categorie)
+function insertArticle($user_id, $title, $content, $categorie, $today)
 
 
 {
     global $connexion;
     global $domaine;
-    $query = $connexion->prepare("INSERT INTO `articles` (`title`, `content`, `user_id`) VALUES (:title, :content, :user_id)");
-    $reponse = $query->execute(['title' => $title, 'content' => $content, 'user_id' => $user_id]);
+    $query = $connexion->prepare("INSERT INTO `articles` (`title`, `content`, `user_id`, `article_date`) VALUES (:title, :content, :user_id `article_date`)");
+    $reponse = $query->execute(['title' => $title, 'content' => $content, 'user_id' => $user_id, `article_date` => $today]);
 
     if ($reponse) {
         header("location: " . $domaine . "/views/PageAjoutArticles.php");

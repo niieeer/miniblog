@@ -1,1 +1,1 @@
-alert();
+confirm("kzqpdkzqpd");
